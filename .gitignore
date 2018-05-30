@@ -1,0 +1,20 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+server/config/
+
+.vscode
+ecosystem.json
+
+npm-debug.log
+mina
+yarn-error.log
+

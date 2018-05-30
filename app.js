@@ -1,37 +1,19 @@
-//app.js
+import './styles/base.sass'
+// 把3方库和封装好promise全局方法挂载到wx上面,这样就可以在内部使用第三方库
+import './vendor'
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
+  async getUserInfo() {
+    // 使用async需要进行babel编译,
+    if (this.globalData.userInfo) return this.globalData.userInfo
+    // 通过登录的方法拿到code
+    const {
+      code
+    } = await wx.loginAsync()
+    // 通过code 换区用户登录信息
+    const {
+      userInfo
+    } = await wx.getUserInfoAsync()
+    this.globalData.userInfo = userInfo
   },
   globalData: {
     userInfo: null
