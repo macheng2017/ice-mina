@@ -1,0 +1,27 @@
+{
+  "name": "ice-mina2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "pug": "^2.0.3",
+    "ramda": "^0.25.0",
+    "regenerator-runtime": "^0.11.1",
+    "tween.js": "^16.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macheng2017/ice-mina.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/macheng2017/ice-mina/issues"
+  },
+  "homepage": "https://github.com/macheng2017/ice-mina#readme"
+}
