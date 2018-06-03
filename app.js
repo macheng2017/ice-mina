@@ -16,6 +16,8 @@ App({
     this.globalData.userInfo = userInfo
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    qiniuCDN: 'http://minipro.spzwl.com/',
+    serverUrl: ''
   }
 })

@@ -25,9 +25,9 @@ const asyncWrap = fn => (options = {}) => new Promise((resolve, reject) => {
 // 可以通过 await wx.loginAsync 直接调用方法
 wx.loginAsync = asyncWrap('login')
 wx.getUserInfoAsync = asyncWrap('getUserInfo')
-wx.requestAsync = asyncWrap('request')
+wx.reqAsync = asyncWrap('request')
 wx.getSystemInfoAsync = asyncWrap('getSystemInfo')
-wx.paymentAsync = asyncWrap('requestPayment')
+wx.payAsync = asyncWrap('requestPayment')
 // 动画效果依赖一个三方库
 let lastTime = 0
 global.requestAnimationFrame = callback => {
