@@ -6,6 +6,8 @@ npm i babel-preset-env@1.5.2 babel-preset-latest@6.24.1 webpack@3.0.0 autoprefix
 
 npm i babel-preset-env babel-preset-latest webpack autoprefixer babel-core babel-loader consolidate copy-webpack-plugin css-loader extract-text-webpack-plugin postcss postcss-loader progress-bar-webpack-plugin sass-loader shelljs style-loader vue-template-compiler wechat-mina-loader node-sass --save-dev
 
+npm i regenerator-runtime --save-dev
+
 * css-loader@0.28.11
 * babel-loader@7.1.4
 * babel-preset-latest@6.24.1

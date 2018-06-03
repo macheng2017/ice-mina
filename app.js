@@ -1,4 +1,4 @@
-import './styles/base.sass'
+import './style/base.sass'
 // 把3方库和封装好promise全局方法挂载到wx上面,这样就可以在内部使用第三方库
 import './vendor'
 App({

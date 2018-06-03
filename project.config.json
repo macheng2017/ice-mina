@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
 	"appid": "wx1cf3c33d21786f00",
-	"projectname": "ice-mina2",
+	"projectname": "ice",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
